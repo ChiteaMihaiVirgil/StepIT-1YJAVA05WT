@@ -16,13 +16,13 @@ public class MaximulADouaNumere
 		
 		if( a < b )
 		{
-			System.out.println( b );
+			System.out.println( "maximul este "+b );
 		}
 		else
 		{
 			if( a > b )
 			{
-				System.out.println( a );
+				System.out.println(  "maximul este "+a );
 			}
 			else
 			{
