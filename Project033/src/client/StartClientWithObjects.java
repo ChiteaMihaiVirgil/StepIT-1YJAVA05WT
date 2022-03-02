@@ -11,7 +11,7 @@ public class StartClientWithObjects
 	
 	public static void main(String[] args)
 	{
-		String userName = "user anonim";
+		String userName = "anonymous";
 		if(args.length == 1)
 		{
 			userName = args[0];
