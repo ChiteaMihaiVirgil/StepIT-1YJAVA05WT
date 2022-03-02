@@ -30,13 +30,10 @@ public class ServerClientHandler extends Thread
 		this.server = server;
 		
 		this.clientSocket = clientSocket;
-		//clientSocket.setKeepAlive( true );
-		//clientSocket.setSoTimeout( 10000 );
 		
 		is = clientSocket.getInputStream();
-				
-		ois = new ObjectInputStream( is );
 		
+		ois = new ObjectInputStream( is );
 		
 		os = clientSocket.getOutputStream();
 		
@@ -73,7 +70,7 @@ public class ServerClientHandler extends Thread
 		Object obj = null;
 			
 		try
-		{			
+		{
 			obj = ois.readObject();
 		}
 		catch(SocketException se)
@@ -89,12 +86,11 @@ public class ServerClientHandler extends Thread
 			System.out.println("I have received an object of a class that I don't know");
 		}
 		
-		
 		boolean correctCommand = false;
 		
 		if( obj instanceof String && "Hello".equals((String)obj))
 		{
-			correctCommand = true;	
+			correctCommand = true;
 			
 			try
 			{
@@ -102,7 +98,7 @@ public class ServerClientHandler extends Thread
 			}
 			catch(ClassNotFoundException ex)
 			{
-				System.out.println("I have received an object of a class that I don't know");
+				System.out.println("Exception : I have received an object of a class that I don't know");
 			}
 			
 			userName = (String) obj;

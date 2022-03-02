@@ -47,7 +47,7 @@ public class ClientServerHandler extends Thread
 		}
 		catch(ClassNotFoundException ex)
 		{
-			System.out.println("I have received an object of a class that I don't know");
+			System.out.println("Exception : I have received an object of a class that I don't know");
 		}
 		
 		

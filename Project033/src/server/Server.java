@@ -48,8 +48,7 @@ public class Server
 			
 		}
 	}
-	
-	
+
 	public void sendMessageTo( String message, String from, String to)
 	{	
 		ServerClientHandler sch = null;
